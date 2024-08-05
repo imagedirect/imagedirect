@@ -7,36 +7,104 @@
               content="width=device-width, initial-scale=1.0">
         <meta name="color-scheme"
               content="light dark">
+        <!-- Pico.css -->
         <link rel="stylesheet"
-              href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+              href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.classless.min.css" />
         <title>imageDirect | Get found in the noise</title>
     </head>
 
     <body>
-        <div id="root">
-            <header class="site__header">
-                <hgroup>
-                    <h1>imageDirect</h1>
-                </hgroup>
+        <header class="site__header">
+            <hgroup>
+                <h1>imageDirect</h1>
+                <p>Get found in the noise&trade;</p>
+            </hgroup>
+        </header>
+        <main class="page">
+            <header class="page__header">
+                <h2>Elegant by design.</h2>
             </header>
-            <main class="page">
-                <header class="page__header">
-                    <h2>Get found in the noise&trade;</h2>
-                </header>
-                <blockquote>
-                    “Design is a funny word. Some people think design means how it looks. But of course, if you dig
-                    deeper, it's really how it works.”
-                    <footer>
-                        <cite>~ Steve Jobs</cite>
-                    </footer>
-                </blockquote>
-                <footer class="page__footer">
+            <blockquote>
+                “Design is a funny word. Some people think design means how it looks. But of course, if you dig
+                deeper, it's really how it works.”
+                <footer>
+                    <cite>~ Steve Jobs</cite>
                 </footer>
-            </main>
-            <footer class="site__footer">
-                <p>&copy; image<strong>Direct</strong></em> Pty Ltd | Get found in the noise&trade;</p>
+            </blockquote>
+
+            <footer class="page__footer">
+
+
+                <nav>
+                    <ul>
+                        <li id="modal"><button class="contrast"
+                                    onclick="modalExample.showModal()">Get started</button></li>
+                        <li><a href="#"
+                               data-theme-switcher="auto">Auto</a></li>
+                        <li><a href="#"
+                               data-theme-switcher="light">Light</a></li>
+                        <li><a href="#"
+                               data-theme-switcher="dark">Dark</a></li>
+                    </ul>
+                </nav>
             </footer>
-        </div>
+        </main>
+        <footer class="site__footer">
+            <p>&copy; image<strong><em>Direct</em></strong> Pty Ltd &emsp; | &emsp; Get found in the noise&trade;</p>
+        </footer>
+
+        <!-- Modal example -->
+        <dialog id="modalExample">
+            <article>
+                <header>
+                    <button aria-label="Close"
+                            rel="prev"
+                            onclick="modalExample.close()"></button>
+                    <h3>Get started</h3>
+                </header>
+                <p>The form is only here to confuse the bots. It won't do anything. Except confuse the bots and perhaps
+                    you too&hellip;</p>
+                <p>Sorry about that.</p>
+                <form>
+                    <input type="text"
+                           name="firstname"
+                           placeholder="First name"
+                           aria-label="First name"
+                           required />
+                    <input type="email"
+                           name="email"
+                           placeholder="Email address"
+                           aria-label="Email address"
+                           autocomplete="email"
+                           required />
+                    <button type="submit">Subscribe</button>
+                    <fieldset>
+                        <label for="terms">
+                            <input type="checkbox"
+                                   role="switch"
+                                   id="terms"
+                                   name="terms" />
+                            I agree to the
+                            <a href="#"
+                               onclick="event.preventDefault()">Privacy Policy</a>
+                        </label>
+                    </fieldset>
+                </form>
+                <hr>
+                <p>The form might be fake but the button below is the real deal.</p>
+                <p>It works perfectly! Mum called us so we know.</p>
+                <footer>
+                    <p>Feel free to drop us a line anytime.</p>
+                    <p><a role="button"
+                           href="tel:+61351740567"
+                           title="International call rates may apply!">Call imageDirect</a></p>
+                </footer>
+            </article>
+        </dialog>
+        <!-- ./ Modal example -->
+
+        <!-- Minimal theme switcher -->
+        <script src="assets/js/minimal-theme-switcher.js"></script>
     </body>
 
 </html>
